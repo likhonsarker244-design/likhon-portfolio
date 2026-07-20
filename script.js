@@ -14,7 +14,7 @@ menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
 // Hero role typewriter (looping)
-const roles = ["I am Electrical Engineer", "I am Maintenance Specialist", "I am Automation Enthusiast"];
+const roles = ["I am Electrical Engineer"];
 const typedEl = document.getElementById('typed');
 let rI = 0, cI = 0, deleting = false;
 function tick() {
