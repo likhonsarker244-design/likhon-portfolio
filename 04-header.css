@@ -1,0 +1,51 @@
+/* ==========================================================================
+   04-HEADER.CSS  —  উপরের ফিক্সড মেনু বার + মোবাইল মেনু
+   ========================================================================== */
+
+#header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  background: transparent;
+  transition: all .3s;
+}
+
+/* স্ক্রল করলে JS ক্লাস 'scrolled' যোগ করে → js/03-header.js */
+#header.scrolled {
+  background: rgba(247, 251, 255, .9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 800; font-size: 18px;
+}
+.logo-badge {
+  display: grid; place-items: center;
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--gradient-accent); color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+.dot { color: var(--primary); }
+
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  padding: 8px 16px; border-radius: 999px;
+  font-size: 14px; font-weight: 500; color: var(--muted);
+  transition: all .2s;
+}
+.nav-links a:hover { background: var(--surface); color: var(--fg); }
+
+.menu-btn {
+  display: none;
+  width: 40px; height: 40px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--card);
+  cursor: pointer;
+}

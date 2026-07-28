@@ -1,0 +1,36 @@
+/* ==========================================================================
+   10-RESPONSIVE.CSS  —  মোবাইল/ট্যাব লেআউট (সবার শেষে লোড হয়)
+   ========================================================================== */
+
+@media (max-width: 860px) {
+
+  /* Layout */
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-img-wrap { order: -1; max-width: 300px; margin: 0 auto; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+
+  /* Header → মোবাইল মেনু */
+  .nav-links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    flex-direction: column; padding: 16px; gap: 8px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { width: 100%; }
+  .menu-btn { display: grid; place-items: center; }
+
+  /* Stats → এক কলাম, dropdown ট্যাপে খোলে */
+  .stats { grid-template-columns: 1fr; max-width: 100%; gap: 15px; }
+  .stat-item { width: 100%; }
+
+  .stat-dropdown { min-width: 260px; max-width: 90vw; }
+
+  /* মোবাইলে Machines dropdown এক কলামেই ভালো দেখায় */
+  .stat-item:nth-child(2) .stat-dropdown {
+    min-width: 260px; max-width: 90vw;
+    display: flex; grid-template-columns: none;
+  }
+}

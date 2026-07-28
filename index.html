@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ======================= SEO / META ======================= -->
+<title>Likhon Sarker — Electrical Engineer &amp; Maintenance Specialist</title>
+<meta name="description" content="Portfolio of Likhon Sarker — Electrical Engineer & Maintenance Specialist at Renata PLC, Dhaka. Specialized in PLC, VFD, HMI, SCADA and industrial automation." />
+<meta property="og:title" content="Likhon Sarker — Electrical Engineer" />
+<meta property="og:description" content="Maintenance Engineer specializing in industrial automation and pharmaceutical machinery." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- ======================= FONTS / ICONS ======================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<!-- =======================================================================
+     CSS — প্রতিটি অংশের জন্য আলাদা ফাইল।
+     যেটা বদলাতে চান শুধু সেই ফাইলটা খুলুন, বাকিগুলোতে হাত দিতে হবে না।
+     ক্রম বদলাবেন না (theme সবার আগে, responsive সবার শেষে)।
+     ======================================================================= -->
+<link rel="stylesheet" href="01-theme.css" />       <!-- রঙ, ফন্ট, ছায়া -->
+<link rel="stylesheet" href="02-base.css" />        <!-- reset, body -->
+<link rel="stylesheet" href="03-layout.css" />      <!-- container, grid, button -->
+<link rel="stylesheet" href="04-header.css" />      <!-- উপরের মেনু -->
+<link rel="stylesheet" href="05-hero.css" />        <!-- প্রথম স্ক্রিন -->
+<link rel="stylesheet" href="06-stats.css" />       <!-- stat কার্ড + dropdown -->
+<link rel="stylesheet" href="07-cards.css" />       <!-- সব সেকশনের কার্ড -->
+<link rel="stylesheet" href="08-footer.css" />      <!-- ফুটার -->
+<link rel="stylesheet" href="09-animations.css" />  <!-- keyframes -->
+<link rel="stylesheet" href="10-responsive.css" />  <!-- মোবাইল -->
+</head>
+<body>
+
+<!-- =======================================================================
+     SECTION 1 : HEADER  (css/04-header.css · js/02-header.js, js/03-mobile-menu.js)
+     ======================================================================= -->
+<header id="header">
+  <div class="container nav">
+
+    <a href="#top" class="logo">
+      <span class="logo-badge"><i class="fa-solid fa-bolt"></i></span>
+      Likhon<span class="dot">.</span>
+    </a>
+
+    <!-- মেনু লিংক: নতুন লিংক যোগ করতে নিচে একটা <a> লাইন কপি করুন -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- =======================================================================
+     SECTION 2 : HERO  (css/05-hero.css · js/04-hero-typing.js)
+     ======================================================================= -->
+<section id="top" class="hero">
+
+  <!-- পেছনের রঙিন ঝাপসা বল (decoration) -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="container hero-grid">
+
+    <!-- ---------- বাম পাশ: লেখা ---------- -->
+    <div class="hero-text">
+
+      <div class="pill">
+        <span class="ping"></span> Available for opportunities
+      </div>
+
+      <h1>Hi, I'm <span class="gradient-text">Likhon Sarker</span></h1>
+
+      <!-- টাইপিং লাইন — লেখা বদলাতে js/00-config.js এর roles বদলান -->
+      <p class="role-line">
+        <span id="typed" class="gradient-text"></span><span class="caret"></span>
+      </p>
+
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">contact me <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#experience" class="btn btn-outline"><i class="fa-solid fa-briefcase"></i> View experience</a>
+      </div>
+
+      <!-- ------------------------------------------------------------------
+           STAT কার্ড + HOVER DROPDOWN   (css/06-stats.css · js/06-stats-dropdown.js)
+
+           নতুন আইটেম যোগ করতে: সংশ্লিষ্ট <ul class="stat-dropdown"> এর ভেতর
+           নিচের মতো একটা লাইন যোগ করুন —
+           <li><i class="fa-solid fa-gear"></i> নতুন লেখা</li>
+
+           নতুন stat কার্ড যোগ করতে: পুরো <div class="stat-item">...</div>
+           ব্লকটা কপি করে নিচে পেস্ট করুন।
+           ------------------------------------------------------------------ -->
+      <dl class="stats">
+
+        <!-- STAT 1 : Years -->
+        <div class="stat-item">
+          <dt>3+</dt>
+          <dd>Years</dd>
+          <ul class="stat-dropdown">
+            <li>
+              <a href="https://renata-ltd.com/" target="_blank" rel="noopener noreferrer" class="dropdown-item-link">
+                <i class="fa-solid fa-building"></i>
+                <span>Renata PLC — Mirpur Site</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- STAT 2 : Machines (দুই কলামে দেখায়) -->
+        <div class="stat-item">
+          <dt>10+</dt>
+          <dd>Machines</dd>
+          <ul class="stat-dropdown">
+            <li><i class="fa-solid fa-gear"></i> <a href="https://www.bcmkor.com/" target="_blank" rel="noopener noreferrer" class="dropdown-item-link">
+                <span>Blister Packaging Machine</span>
+              </a></li>
+            <li><i class="fa-solid fa-gear"></i> Solpac Filling Machine</li>
+            <li><i class="fa-solid fa-gear"></i> Granulation Machine</li>
+            <li><i class="fa-solid fa-gear"></i> Encapsulation Machine</li>
+            <li><i class="fa-solid fa-gear"></i> Automatic Cartoning (Buchon &amp; Hunga)</li>
+            <li><i class="fa-solid fa-gear"></i> Pot Filling Machine</li>
+            <li><i class="fa-solid fa-gear"></i> Sticker Labeling Machine</li>
+            <li><i class="fa-solid fa-gear"></i> VFD Configuration &amp; Install</li>
+          </ul>
+        </div>
+
+        <!-- STAT 3 : Trainings -->
+        <div class="stat-item">
+          <dt>4</dt>
+          <dd>Trainings</dd>
+          <ul class="stat-dropdown">
+            <li><i class="fa-solid fa-graduation-cap"></i> GreenPower Transformer Co. (6 Months)</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Energypac Engineering Ltd. (3 Months)</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Nur Engineering Tech. &amp; Automation (3 Months)</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> MAWTS Institute of Technology (3 Months)</li>
+          </ul>
+        </div>
+
+      </dl>
+
+    </div>
+
+    <!-- ---------- ডান পাশ: ছবি ---------- -->
+    <div class="hero-img-wrap">
+      <div class="glow-bg"></div>
+      <div class="img-frame glass">
+        <img src="pic.png" alt="Likhon Sarker" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 3 : ABOUT  (css/07-cards.css)
+     ======================================================================= -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2 class="typed-heading" data-text="Career Objective"></h2>
+    </div>
+
+    <div class="card about-card">
+      <span class="card-badge"><i class="fa-solid fa-award"></i></span>
+      <p>“I want to get a suitable job in any good organization. I want to work with enthusiasm
+        by using my skills and bring innovation through my work. I also want to keep myself
+        up to date with modern trends while working and manage my time efficiently.”</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 4 : PROFESSIONAL EXPERIENCE
+     নতুন চাকরি যোগ করতে <article class="tl-card"> ব্লক কপি করুন।
+     ======================================================================= -->
+<section id="experience" class="section alt">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Career</span>
+      <h2 class="typed-heading" data-text="Professional Experience"></h2>
+    </div>
+
+    <div class="grid-2 narrow">
+
+      <!-- JOB 1 -->
+      <article class="tl-card">
+        <div class="tl-top">
+          <span class="tl-date"><i class="fa-regular fa-calendar"></i> July 2023 — Present</span>
+          <span class="tag">Current</span>
+        </div>
+        <h3>Junior Engineer</h3>
+        <div class="org">
+          <i class="fa-solid fa-building"></i>
+          <a href="https://renata-ltd.com/" target="_blank" rel="noopener noreferrer">Renata PLC — Mirpur Site</a>
+        </div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Maintenance and troubleshooting of all production machineries of
+            Bilister packaging machine, Solpac filling machine, Granulation and
+            Encapsulation machine, automatic cartoning machine (Buchon &amp; Hunga),
+            Pot filling machine, sticker labeling machine. Especially responsible for
+            schedule preventive maintenance, as mentioned in the sop checklist.
+            Also responsible for configuring and installing vfd.
+          </li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 5 : TRAININGS & INTERNSHIPS
+     নতুন ট্রেনিং যোগ করতে একটা <article class="tl-card"> ব্লক কপি করুন।
+     ======================================================================= -->
+<section id="training" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Training</span>
+      <h2 class="typed-heading" data-text="Trainings &amp; Internships"></h2>
+      <p class="desc">Hands-on industrial trainings that built the foundation of my technical expertise.</p>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- TRAINING 1 -->
+      <article class="tl-card">
+        <div class="tl-top"><span class="tl-date"><i class="fa-regular fa-calendar"></i> Training</span></div>
+        <h3>Industrial Training (6 Months)</h3>
+        <div class="org">
+          <i class="fa-solid fa-building"></i>
+          <a href="https://greenpower.com.bd/" target="_blank" rel="noopener noreferrer">GreenPower Transformer Company</a>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Hands-on training in Sub Station, Transformer, On-line UPS &amp; Voltage Stabilizer Department</li>
+        </ul>
+      </article>
+
+      <!-- TRAINING 2 -->
+      <article class="tl-card">
+        <div class="tl-top"><span class="tl-date"><i class="fa-regular fa-calendar"></i> Internship</span></div>
+        <h3>Internship (3 Months)</h3>
+        <div class="org">
+          <i class="fa-solid fa-building"></i>
+          <a href="https://www.energypac.com.bd/" target="_blank" rel="noopener noreferrer">Energypac Engineering Ltd.</a>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Exposure to Power Transformer, Distribution Transformer, Switchgear, Isolator,
+            Instrument Transformer, Cast Resin Transformer, Single Phase Transformer, Breaker,
+            AVR &amp; Battery Charger, Bus Bar Trunking, Insulation &amp; Fabrication.</li>
+        </ul>
+      </article>
+
+      <!-- TRAINING 3 -->
+      <article class="tl-card">
+        <div class="tl-top"><span class="tl-date"><i class="fa-regular fa-calendar"></i> Training</span></div>
+        <h3>Training (3 Months)</h3>
+        <div class="org">
+          <i class="fa-solid fa-building"></i>
+          <a href="https://neta.com.bd/" target="_blank" rel="noopener noreferrer">Nur Engineering Technology &amp; Automation</a>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> PLC, VFD, HMI, SCADA and industrial automation system configuration.</li>
+        </ul>
+      </article>
+
+      <!-- TRAINING 4 -->
+      <article class="tl-card">
+        <div class="tl-top"><span class="tl-date"><i class="fa-regular fa-calendar"></i> Training</span></div>
+        <h3>Training (3 Months)</h3>
+        <div class="org">
+          <i class="fa-solid fa-building"></i>
+          <a href="https://mawts.org/contact" target="_blank" rel="noopener noreferrer">MAWTS Institute of Technology</a>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Practical electrical workshops covering installation, house wiring and troubleshooting.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 6 : EDUCATION
+     ======================================================================= -->
+<section id="education" class="section alt">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Education</span>
+      <h2 class="typed-heading" data-text="Academic Background"></h2>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- EDUCATION 1 -->
+      <article class="edu-card">
+        <span class="chip-icon primary"><i class="fa-solid fa-graduation-cap"></i></span>
+        <h3>Diploma in Engineering (Electrical Technology)</h3>
+        <div class="org">
+          <a href="https://mawts.org/contact" target="_blank" rel="noopener noreferrer">MAWTS Institute of Technology</a> (BTEB)
+        </div>
+        <small>Session 2018-19 · Passed 2022</small>
+      </article>
+
+      <!-- EDUCATION 2 -->
+      <article class="edu-card">
+        <span class="chip-icon accent"><i class="fa-solid fa-school"></i></span>
+        <h3>Secondary School Certificate (S.S.C)</h3>
+        <div class="org">
+          <a href="https://mbsc.edu.bd/" target="_blank" rel="noopener noreferrer">Mirpur Bangla High School</a> (Science Group)
+        </div>
+        <small>Passed 2018</small>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 7 : SKILLS
+     নতুন স্কিল যোগ করতে <ul class="chips"> এর ভেতর <li>নাম</li> যোগ করুন।
+     ======================================================================= -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Skills</span>
+      <h2 class="typed-heading" data-text="Technical Toolkit"></h2>
+    </div>
+
+    <div class="grid-3">
+
+      <!-- SKILL GROUP 1 -->
+      <div class="skill-card">
+        <span class="chip-icon primary"><i class="fa-solid fa-microchip"></i></span>
+        <h3>Industrial Automation</h3>
+        <ul class="chips">
+          <li>PLC</li><li>VFD</li><li>HMI</li><li>SCADA</li>
+          <li>Sensors</li><li>Motor Drives</li>
+        </ul>
+      </div>
+
+      <!-- SKILL GROUP 2 -->
+      <div class="skill-card">
+        <span class="chip-icon accent"><i class="fa-solid fa-bolt"></i></span>
+        <h3>Electrical</h3>
+        <ul class="chips">
+          <li>Wiring</li><li>Switchgear</li><li>Transformers</li>
+          <li>Troubleshooting</li><li>Preventive Maintenance</li>
+        </ul>
+      </div>
+
+      <!-- SKILL GROUP 3 -->
+      <div class="skill-card">
+        <span class="chip-icon primary"><i class="fa-solid fa-desktop"></i></span>
+        <h3>Computer</h3>
+        <ul class="chips">
+          <li>MS Office</li><li>AutoCAD</li><li>Windows</li><li>Data Entry</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 8 : CONTACT
+     ======================================================================= -->
+<section id="contact" class="section alt">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="eyebrow">Contact</span>
+      <h2 class="typed-heading" data-text="Let's Connect"></h2>
+      <p class="desc">Available for full-time roles, contracts, and industrial engineering collaborations.</p>
+    </div>
+
+    <div class="grid-3">
+
+      <a class="contact-card" href="mailto:likhonsarker244@gmail.com">
+        <span class="chip-icon primary"><i class="fa-solid fa-envelope"></i></span>
+        <strong>Email</strong>
+        <small>likhonsarker244@gmail.com</small>
+      </a>
+
+      <a class="contact-card" href="tel:+8801630612525">
+        <span class="chip-icon accent"><i class="fa-solid fa-phone"></i></span>
+        <strong>Phone</strong>
+        <small>+880 1630612525</small>
+      </a>
+
+      <a class="contact-card" href="https://wa.me/8801630612525" target="_blank" rel="noopener noreferrer">
+        <span class="chip-icon primary"><i class="fa-brands fa-whatsapp"></i></span>
+        <strong>Whatsapp</strong>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =======================================================================
+     SECTION 9 : FOOTER  (css/08-footer.css · js/01-year.js)
+     ======================================================================= -->
+<footer>
+  <div class="container foot">
+    <span>© <span id="year"></span> Likhon Sarker. All rights reserved.</span>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/likhon-sarker-71480a232/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/likhon.sarker.146" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="mailto:likhonsarker244@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =======================================================================
+     JAVASCRIPT — প্রতিটি ফিচার আলাদা ফাইলে।
+     একটার সমস্যা হলে অন্যটা নষ্ট হবে না। config সবার আগে থাকতে হবে।
+     ======================================================================= -->
+<script src="js/00-config.js"></script>
+<script src="js/01-year.js"></script>
+<script src="js/02-header.js"></script>
+<script src="js/03-mobile-menu.js"></script>
+<script src="js/04-hero-typing.js"></script>
+<script src="js/05-heading-typing.js"></script>
+<script src="js/06-stats-dropdown.js"></script>
+
+</body>
+</html>

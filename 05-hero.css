@@ -1,0 +1,90 @@
+/* ==========================================================================
+   05-HERO.CSS  —  উপরের প্রথম স্ক্রিন (নাম, টাইপিং লাইন, ছবি)
+   Stat কার্ড ও তার dropdown আলাদা ফাইলে → 06-stats.css
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  overflow: visible;          /* dropdown যেন কাটা না পড়ে */
+  background: var(--gradient-soft);
+  padding: 140px 0 80px;
+}
+
+/* পেছনের ঝাপসা রঙিন বল */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .4;
+  z-index: 0;
+  pointer-events: none;
+}
+.blob-1 { top: -120px; right: -120px; width: 360px; height: 360px; background: var(--gradient-accent); }
+.blob-2 { top: 160px;  left: -120px;  width: 300px; height: 300px; background: rgba(30, 64, 175, .25); }
+
+.hero-grid {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 48px; align-items: center;
+  overflow: visible;
+}
+
+.hero-text { position: relative; z-index: 5; overflow: visible; }
+
+/* "Available for opportunities" ব্যাজ */
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--border); background: var(--card);
+  border-radius: 999px; padding: 6px 14px;
+  font-size: 12px; color: var(--muted);
+  box-shadow: var(--shadow-sm);
+}
+.ping {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  animation: ping 1.6s infinite;
+}
+
+.hero-text h1 {
+  margin-top: 24px;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800; line-height: 1.05;
+}
+
+/* টাইপিং রোল লাইন (JS: js/04-hero-typing.js) */
+.role-line {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 600;
+  min-height: 1.4em;
+}
+.caret {
+  display: inline-block;
+  width: 3px; height: .9em;
+  background: var(--accent);
+  margin-left: 4px; vertical-align: middle;
+  animation: blink 1s steps(1) infinite;
+}
+
+.lead { margin-top: 16px; color: var(--muted); max-width: 560px; }
+.cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---- প্রোফাইল ছবি ---- */
+.hero-img-wrap { position: relative; z-index: 1; }
+.glow-bg {
+  position: absolute; inset: -1rem;
+  background: var(--gradient-accent);
+  opacity: .4; filter: blur(60px); border-radius: 50%;
+}
+.img-frame {
+  position: relative;
+  width: 280px; height: 280px;
+  padding: .5rem; border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+.img-frame img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+@media (min-width: 768px) {
+  .img-frame { width: 360px; height: 360px; }
+}

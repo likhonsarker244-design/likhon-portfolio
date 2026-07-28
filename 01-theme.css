@@ -1,0 +1,41 @@
+/* ==========================================================================
+   01-THEME.CSS  —  শুধু রঙ, ফন্ট, ছায়া (decoration) এখানে বদলাবে
+   এই ফাইলে একটা ভ্যালু বদলালে পুরো সাইটে সেটা বদলাবে।
+   অন্য কোনো ফাইলে হাত দিতে হবে না।
+   ========================================================================== */
+
+:root {
+
+  /* ---- Colors ---- */
+  --bg: #f7fbff;
+  --fg: #0f1e3d;
+  --muted: #5b6b88;
+  --card: #ffffff;
+  --border: #e2e8f2;
+  --surface: #eef4fb;
+
+  --primary: #1e40af;
+  --primary-glow: #2f78d1;
+  --accent: #0ea5b7;
+
+  /* ---- Shape ---- */
+  --radius: 14px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 1px 2px rgba(15, 30, 61, .06);
+  --shadow-md: 0 8px 24px -8px rgba(15, 30, 61, .14);
+  --shadow-lg: 0 24px 48px -16px rgba(30, 64, 175, .28);
+  --shadow-glow: 0 0 60px rgba(14, 165, 183, .35);
+
+  /* ---- Gradients ---- */
+  --gradient-accent: linear-gradient(135deg, #1e40af, #0ea5b7);
+  --gradient-hero: linear-gradient(135deg, #1e40af 0%, #2f78d1 50%, #0ea5b7 100%);
+  --gradient-soft: linear-gradient(180deg, #f7fbff 0%, #e6f0fb 100%);
+
+  /* ---- Fonts ---- */
+  --font-display: "Poppins", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", "Poppins", system-ui, sans-serif;
+
+  /* ---- Breakpoint reference (CSS-এ শুধু মনে রাখার জন্য) ---- */
+  /* mobile breakpoint = 860px  → দেখুন 10-responsive.css */
+}

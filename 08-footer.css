@@ -1,0 +1,18 @@
+/* ==========================================================================
+   08-FOOTER.CSS  —  নিচের ফুটার + সোশ্যাল আইকন
+   ========================================================================== */
+
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--card);
+  padding: 24px 0;
+}
+
+.foot {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  color: var(--muted); font-size: 14px;
+}
+
+.social { display: flex; gap: 16px; font-size: 18px; }
+.social a:hover { color: var(--primary); }
